@@ -4,7 +4,7 @@
   "description": "this is a bvn replica site",
   "main": "index.js",
   "engines": {
-    "node": "6"
+    "node": "10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
