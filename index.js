@@ -1,11 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+require('dotenv').config();
 // const { User, Bvn } = require('./db/models')
 // const { Op } = require("sequelize");
 
 
 const app = express();
-const PORT = 9000;
+const PORT =  process.env.PORT || 9000;
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -108,7 +109,7 @@ app.get('/', (req, res) => {
 // })
 
 
-app.listen(9000, (err) => {
+app.listen(PORT, (err) => {
     if (err) {
         throw new Error('something happened')
     }
